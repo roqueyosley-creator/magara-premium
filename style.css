@@ -237,11 +237,39 @@ input, select {
     border: 1px solid #444;
     color: #fff;
     border-radius: 4px;
+    font-size: 16px; /* Fundamental para evitar auto-zoom en iOS Safari */
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 /* Responsive */
 /* Mantener 2 columnas por requerimiento explícito tanto en móvil como desktop */
 .product-grid {
     grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 1rem;
+    }
+    
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .admin-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .admin-card {
+        padding: 1rem;
+    }
 }
 

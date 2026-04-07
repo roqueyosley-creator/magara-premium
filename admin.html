@@ -40,27 +40,29 @@
         </section>
 
         <section class="admin-card">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
                 <h3><i class="fas fa-boxes"></i> Inventario Resumido</h3>
-                <button id="download-json" class="btn" style="width: auto; padding: 0.5rem 1rem; font-size: 0.9rem; background: var(--accent-gold); color: #000;">
+                <button id="download-json" class="btn" style="width: auto; padding: 0.5rem 1rem; font-size: 0.9rem; background: var(--accent-gold); color: #000; margin-top: 0;">
                     <i class="fas fa-file-download"></i> Descargar products.json
                 </button>
             </div>
             <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">
                 Para que los cambios sean visibles para todos los clientes (en GitHub Pages), debes descargar el archivo y reemplazar <code>products.json</code> en tu repositorio.
             </p>
-            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
-                <thead>
-                    <tr style="border-bottom: 1px solid #333; text-align: left;">
-                        <th style="padding: 1rem 0;">Categoría</th>
-                        <th>Existencias</th>
-                        <th>Precio Promedio</th>
-                    </tr>
-                </thead>
-                <tbody id="inventory-stats">
-                    <!-- Stats injected by JS -->
-                </tbody>
-            </table>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid #333; text-align: left;">
+                            <th style="padding: 1rem 0; white-space: nowrap;">Categoría</th>
+                            <th style="white-space: nowrap;">Existencias</th>
+                            <th style="white-space: nowrap;">Precio Promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventory-stats">
+                        <!-- Stats injected by JS -->
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section class="admin-card">
