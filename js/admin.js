@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const productList = document.getElementById('product-list');
     const addProductForm = document.getElementById('add-product-form');
     const downloadJsonBtn = document.getElementById('download-json');
+    const imgPickerBtn = document.getElementById('img-picker-btn');
+    const prodFileInput = document.getElementById('prod-file-input');
+
+    let selectedBase64Img = null;
 
     // Load current settings
     const savedRate = localStorage.getItem('magara_exchange_rate');
@@ -40,16 +44,67 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Tasa de cambio actualizada correctamente.');
     });
 
+    imgPickerBtn.addEventListener('click', () => {
+        prodFileInput.click();
+    });
+
+    prodFileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const img = new Image();
+            img.onload = function() {
+                // Compresión en Canvas para evitar excesivo tamaño en Base64
+                const canvas = document.createElement('canvas');
+                const MAX_WIDTH = 600;
+                const MAX_HEIGHT = 600;
+                let width = img.width;
+                let height = img.height;
+
+                if (width > height) {
+                    if (width > MAX_WIDTH) {
+                        height *= MAX_WIDTH / width;
+                        width = MAX_WIDTH;
+                    }
+                } else {
+                    if (height > MAX_HEIGHT) {
+                        width *= MAX_HEIGHT / height;
+                        height = MAX_HEIGHT;
+                    }
+                }
+
+                canvas.width = width;
+                canvas.height = height;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0, width, height);
+
+                // Guardar como JPEG con calidad del 80% (mantiene el peso bajo)
+                selectedBase64Img = canvas.toDataURL('image/jpeg', 0.8);
+                document.getElementById('prod-img').value = `[Galería: ${file.name}]`;
+            };
+            img.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+    });
+
     addProductForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const category = document.getElementById('prod-category').value.trim();
-        const img = document.getElementById('prod-img').value.trim();
+        let img = document.getElementById('prod-img').value.trim();
         const priceUSD = parseFloat(document.getElementById('prod-price').value);
+
+        if (selectedBase64Img && img.startsWith('[Galería:')) {
+            img = selectedBase64Img;
+        }
 
         currentProducts.push({ category, img, priceUSD });
         saveProducts();
         
         addProductForm.reset();
+        selectedBase64Img = null;
+        prodFileInput.value = '';
         alert('Producto agregado. Recuerde "Descargar products.json" para actualizar el repositorio.');
     });
 
