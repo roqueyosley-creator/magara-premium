@@ -70,11 +70,10 @@
             <form id="add-product-form" class="input-group" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
                 <input type="text" id="prod-category" placeholder="Categoría (ej. Ropa)" required style="flex: 1; min-width: 150px; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid #333; color: white; border-radius: 4px;">
                 <div style="display: flex; gap: 0.5rem; flex: 2; min-width: 200px;">
-                    <input type="text" id="prod-img" placeholder="Ruta Imagen o Galería..." required style="flex: 1; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid #333; color: white; border-radius: 4px; margin: 0;">
-                    <button type="button" id="img-picker-btn" class="btn" style="width: auto; padding: 0.8rem 1rem; margin: 0; border: 1px solid #333; background: rgba(255,255,255,0.1);" title="Cargar desde galería">
-                        <i class="fas fa-image"></i>
+                    <button type="button" id="img-picker-btn" class="btn" style="width: 100%; padding: 0.8rem 1rem; margin: 0; border: 1px solid #333; background: rgba(255,255,255,0.05); color: white; display: flex; align-items: center; gap: 0.5rem; border-radius: 4px;">
+                        <i class="fas fa-camera"></i> <span id="img-name-display">Subir Foto o Imagen...</span>
                     </button>
-                    <input type="file" id="prod-file-input" accept="image/*" style="display: none;">
+                    <input type="file" id="prod-file-input" accept="image/*" style="display: none;" required>
                 </div>
                 <input type="number" step="0.01" id="prod-price" placeholder="Precio USD" required style="flex: 1; min-width: 100px; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid #333; color: white; border-radius: 4px;">
                 <button type="submit" class="btn" style="margin-top: 0; width: auto; padding: 0.8rem 1.5rem;">Agregar</button>

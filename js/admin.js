@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Guardar como JPEG con calidad del 80% (mantiene el peso bajo)
                 selectedBase64Img = canvas.toDataURL('image/jpeg', 0.8);
-                document.getElementById('prod-img').value = `[Galería: ${file.name}]`;
+                document.getElementById('img-name-display').innerText = file.name;
             };
             img.src = event.target.result;
         };
@@ -92,12 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
     addProductForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const category = document.getElementById('prod-category').value.trim();
-        let img = document.getElementById('prod-img').value.trim();
         const priceUSD = parseFloat(document.getElementById('prod-price').value);
 
-        if (selectedBase64Img && img.startsWith('[Galería:')) {
-            img = selectedBase64Img;
+        if (!selectedBase64Img) {
+            alert('Por favor selecciona una imagen para el producto.');
+            return;
         }
+
+        const img = selectedBase64Img;
 
         currentProducts.push({ category, img, priceUSD });
         saveProducts();
@@ -105,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addProductForm.reset();
         selectedBase64Img = null;
         prodFileInput.value = '';
+        document.getElementById('img-name-display').innerText = 'Subir Foto o Imagen...';
         alert('Producto agregado. Recuerde "Descargar products.json" para actualizar el repositorio.');
     });
 
