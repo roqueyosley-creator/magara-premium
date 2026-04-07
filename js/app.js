@@ -27,6 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (savedRate) {
             appData.exchangeRate = parseFloat(savedRate);
         }
+        
+        const savedProducts = localStorage.getItem('magara_products');
+        if (savedProducts) {
+            appData.products = JSON.parse(savedProducts);
+        }
+
         rateDisplay.textContent = appData.exchangeRate;
         renderProducts('Todos');
 
