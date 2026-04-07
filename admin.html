@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo | MAGARA Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+
+    <header>
+        <div class="container">
+            <h1 class="logo">MAGARA <small style="font-size: 1rem; color: var(--accent-gold);">Admin</small></h1>
+            <nav>
+                <a href="index.html">Ver Tienda</a>
+                <a href="#" class="active">Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container admin-container">
+        <div class="admin-header">
+            <h2>Gestión de Precios Dinámicos</h2>
+        </div>
+
+        <section class="admin-card">
+            <h3><i class="fas fa-coins"></i> Tasa de Cambio (El Toque)</h3>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">
+                Actualice el valor de mercado para la conversión USD -> CUP.
+            </p>
+            <div class="input-group" style="max-width: 300px;">
+                <label>1 USD = </label>
+                <div style="display: flex; gap: 0.5rem;">
+                    <input type="number" id="rate-input" value="520">
+                    <button class="btn" id="save-rate" style="margin-top: 0; width: auto; padding: 0 1rem;">Guardar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="admin-card">
+            <h3><i class="fas fa-boxes"></i> Inventario Resumido</h3>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                <thead>
+                    <tr style="border-bottom: 1px solid #333; text-align: left;">
+                        <th style="padding: 1rem 0;">Categoría</th>
+                        <th>Existencias</th>
+                        <th>Precio Promedio</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-stats">
+                    <!-- Stats injected by JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="admin-card">
+            <h3><i class="fas fa-shopping-bag"></i> Gestión de Pedidos</h3>
+            <p style="color: var(--text-muted);">Los pedidos llegan directamente a WhatsApp. Próximamente integración con Base de Datos.</p>
+        </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGARA Premium | E-commerce Sensual & Profesional</title>
+    <meta name="description" content="E-commerce premium de ropa, zapatos y juguetes para adultos en Cuba. Calidad, discreción y elegancia.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">MAGARA</h1>
+            <p class="subtitle">Premium E-commerce</p>
+            <nav id="main-nav">
+                <a href="#" class="nav-link active" data-category="Todos">Todos</a>
+                <a href="#" class="nav-link" data-category="Ropa">Ropa</a>
+                <a href="#" class="nav-link" data-category="Tenis">Zapatos</a>
+                <a href="#" class="nav-link" data-category="Jugetes para Adultos">Juguetes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Exchange Rate Info -->
+        <div id="exchange-info" style="text-align: right; font-size: 0.8rem; color: var(--accent-nude); margin-top: 1rem;">
+            Tasa de cambio: 1 USD = <span id="current-rate">520</span> CUP
+        </div>
+
+        <!-- Product Grid -->
+        <section class="product-grid" id="product-container">
+            <!-- Products will be injected by JS -->
+            <div class="loader">Cargando catálogo...</div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Sidebar (Conceptual) -->
+    <div id="cart-drawer" style="display:none;"></div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="#" class="whatsapp-float" id="whatsapp-order" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <div class="container" style="padding: 3rem 0; text-align: center; border-top: 1px solid #333; margin-top: 4rem;">
+            <p>&copy; 2026 MAGARA Premium. Todos los derechos reservados.</p>
+            <div class="social-links" style="margin-top: 1rem; display: flex; justify-content: center; gap: 1.5rem;">
+                <a href="https://www.instagram.com/sile__store?igsh=MTEwdjR4bjNvenNlOQ%3D%3D&utm_source=qr" target="_blank" style="color: var(--text-muted); font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                <a href="https://chat.whatsapp.com/CPMcQHEGegw5SQqnRBrDi9?mode=gi_t" target="_blank" style="color: var(--text-muted); font-size: 1.5rem;"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
