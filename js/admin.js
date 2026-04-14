@@ -13,30 +13,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let selectedBase64Img = null;
 
+    const supabaseClient = window.supabase ? window.supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY) : null;
+
     // Load current settings
     const savedRate = localStorage.getItem('magara_exchange_rate');
 
-    fetch('products.json')
-        .then(res => res.json())
-        .then(data => {
-            fullAppData = data;
-            
+    async function initAdmin() {
+        // Obtenemos los datos base (tasa de cambio, num whatsapp)
+        try {
+            const res = await fetch('products.json');
+            fullAppData = await res.json();
             if (savedRate) {
                 rateInput.value = savedRate;
             } else {
-                rateInput.value = data.exchangeRate;
+                rateInput.value = fullAppData.exchangeRate;
             }
+        } catch(e) {
+            console.error("Error al leer JSON base", e);
+        }
 
-            const savedProducts = localStorage.getItem('magara_products');
-            if (savedProducts) {
-                currentProducts = JSON.parse(savedProducts);
+        // Cargar productos desde Supabase
+        if (supabaseClient) {
+            const { data, error } = await supabaseClient.from('products').select('*').order('created_at', { ascending: false });
+            if (!error && data) {
+                currentProducts = data.map(p => ({
+                    id: p.id,
+                    category: p.category,
+                    priceUSD: p.priceUSD,
+                    img: p.images && p.images.length > 0 ? p.images[0] : p.img // Soporte dual
+                }));
             } else {
-                currentProducts = data.products;
+                console.warn("No se conectó a Supabase. Cayendo a caché.");
+                loadFallbackProducts();
             }
-            
-            renderStats(currentProducts);
-            renderProductList(currentProducts);
-        });
+        } else {
+            loadFallbackProducts();
+        }
+
+        renderStats(currentProducts);
+        renderProductList(currentProducts);
+    }
+
+    function loadFallbackProducts() {
+        const savedProducts = localStorage.getItem('magara_products');
+        if (savedProducts) {
+            currentProducts = JSON.parse(savedProducts);
+        } else if (fullAppData && fullAppData.products) {
+            currentProducts = fullAppData.products;
+        }
+    }
+
+    initAdmin();
 
     saveBtn.addEventListener('click', () => {
         localStorage.setItem('magara_exchange_rate', rateInput.value);
@@ -89,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.readAsDataURL(file);
     });
 
-    addProductForm.addEventListener('submit', (e) => {
+    addProductForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const category = document.getElementById('prod-category').value.trim();
         const priceUSD = parseFloat(document.getElementById('prod-price').value);
@@ -100,15 +127,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const img = selectedBase64Img;
+        let newProduct = { category, img, priceUSD };
 
-        currentProducts.push({ category, img, priceUSD });
+        // Guardar en Supabase
+        if (supabaseClient) {
+            const { data, error } = await supabaseClient.from('products').insert([
+                { category: category, priceUSD: priceUSD, images: [img] }
+            ]).select();
+
+            if (error) {
+                console.error(error);
+                alert('Hubo un error subiendo el producto a la Base de Datos.');
+                return;
+            } else if (data && data.length > 0) {
+                newProduct.id = data[0].id;
+            }
+        }
+
+        currentProducts.unshift(newProduct);
         saveProducts();
         
         addProductForm.reset();
         selectedBase64Img = null;
         prodFileInput.value = '';
         document.getElementById('img-name-display').innerText = 'Subir Foto o Imagen...';
-        alert('Producto agregado. Recuerde "Descargar products.json" para actualizar el repositorio.');
+        alert('Producto agregado y guardado.');
     });
 
     downloadJsonBtn.addEventListener('click', () => {
@@ -134,8 +177,16 @@ document.addEventListener('DOMContentLoaded', () => {
         URL.revokeObjectURL(url);
     });
 
-    window.deleteProduct = function(index) {
+    window.deleteProduct = async function(index) {
         if (confirm('¿Estás seguro de que deseas eliminar este producto?')) {
+            const prod = currentProducts[index];
+            if (supabaseClient && prod.id) {
+                const { error } = await supabaseClient.from('products').delete().eq('id', prod.id);
+                if (error) {
+                    alert('Error borrando en Base de Datos: ' + error.message);
+                    return;
+                }
+            }
             currentProducts.splice(index, 1);
             saveProducts();
         }

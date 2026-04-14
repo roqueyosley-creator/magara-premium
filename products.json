@@ -1,52 +1,622 @@
 {
     "exchangeRate": 520,
-    "whatsappNumber": "+79918818456",
+    "whatsappNumber": "+79778095292",
     "products": [
-        {"category": "Ropa", "img": "Ropa/35usd.jpg", "priceUSD": 35},
-        {"category": "Ropa", "img": "Ropa/40,usd.jpg", "priceUSD": 40},
-        {"category": "Ropa", "img": "Ropa/40-usd.jpg", "priceUSD": 40},
-        {"category": "Ropa", "img": "Ropa/40usd.jpg", "priceUSD": 40},
-        {"category": "Ropa", "img": "Ropa/45-usd.jpg", "priceUSD": 45},
-        {"category": "Ropa", "img": "Ropa/45..usd.jpg", "priceUSD": 45},
-        {"category": "Ropa", "img": "Ropa/45.usd.jpg", "priceUSD": 45},
-        {"category": "Ropa", "img": "Ropa/45usd.jpg", "priceUSD": 45},
-        {"category": "Ropa", "img": "Ropa/50usd.jpg", "priceUSD": 50},
-        {"category": "Ropa", "img": "Ropa/50´´usd.jpg", "priceUSD": 50},
-        
-        {"category": "Tenis", "img": "Tenis/50+usd.jpg", "priceUSD": 50},
-        {"category": "Tenis", "img": "Tenis/50-u.jpg", "priceUSD": 50},
-        {"category": "Tenis", "img": "Tenis/50usd.jpg", "priceUSD": 50},
-        {"category": "Tenis", "img": "Tenis/55,usd.jpg", "priceUSD": 55},
-        {"category": "Tenis", "img": "Tenis/55-usd.jpg", "priceUSD": 55},
-        {"category": "Tenis", "img": "Tenis/55.jpg", "priceUSD": 55},
-        {"category": "Tenis", "img": "Tenis/55.u.jpg", "priceUSD": 55},
-        {"category": "Tenis", "img": "Tenis/55d.jpg", "priceUSD": 55},
-        {"category": "Tenis", "img": "Tenis/55p.jpg", "priceUSD": 55},
-        {"category": "Tenis", "img": "Tenis/55u.jpg", "priceUSD": 55},
-        {"category": "Tenis", "img": "Tenis/55usd-.jpg", "priceUSD": 55},
-        {"category": "Tenis", "img": "Tenis/55usd.jpg", "priceUSD": 55},
-        {"category": "Tenis", "img": "Tenis/55usd{.jpg", "priceUSD": 55},
-        {"category": "Tenis", "img": "Tenis/55{.jpg", "priceUSD": 55},
-        {"category": "Tenis", "img": "Tenis/60...jpg", "priceUSD": 60},
-        {"category": "Tenis", "img": "Tenis/60..jpg", "priceUSD": 60},
-        {"category": "Tenis", "img": "Tenis/60.jpg", "priceUSD": 60},
-        {"category": "Tenis", "img": "Tenis/60d.jpg", "priceUSD": 60},
-        {"category": "Tenis", "img": "Tenis/60s.jpg", "priceUSD": 60},
-        {"category": "Tenis", "img": "Tenis/60usd.jpg", "priceUSD": 60},
-        {"category": "Tenis", "img": "Tenis/60}.jpg", "priceUSD": 60},
-        {"category": "Tenis", "img": "Tenis/65.jpg", "priceUSD": 65},
-        {"category": "Tenis", "img": "Tenis/70,.jpg", "priceUSD": 70},
-        {"category": "Tenis", "img": "Tenis/70..jpg", "priceUSD": 70},
-        {"category": "Tenis", "img": "Tenis/70.jpg", "priceUSD": 70},
-        {"category": "Tenis", "img": "Tenis/70usd.jpg", "priceUSD": 70},
-        {"category": "Tenis", "img": "Tenis/70´´.jpg", "priceUSD": 70},
-
-        {"category": "Jugetes para Adultos", "img": "Jugetes para Adultos/25usd.jpg", "priceUSD": 25},
-        {"category": "Jugetes para Adultos", "img": "Jugetes para Adultos/30 usd.jpg", "priceUSD": 30},
-        {"category": "Jugetes para Adultos", "img": "Jugetes para Adultos/30--usd.jpg", "priceUSD": 30},
-        {"category": "Jugetes para Adultos", "img": "Jugetes para Adultos/30-usd.jpg", "priceUSD": 30},
-        {"category": "Jugetes para Adultos", "img": "Jugetes para Adultos/30.jpg", "priceUSD": 30},
-        {"category": "Jugetes para Adultos", "img": "Jugetes para Adultos/30.usd.jpg", "priceUSD": 30},
-        {"category": "Jugetes para Adultos", "img": "Jugetes para Adultos/30usd.jpg", "priceUSD": 30}
+        {
+            "category": "Ropa",
+            "images": [
+                "Ropa/35usd.jpg",
+                "Ropa/35usd.jpg"
+            ],
+            "priceUSD": 35,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Ropa",
+            "images": [
+                "Ropa/40,usd.jpg",
+                "Ropa/40,usd.jpg"
+            ],
+            "priceUSD": 40,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Ropa",
+            "images": [
+                "Ropa/40-usd.jpg",
+                "Ropa/40-usd.jpg"
+            ],
+            "priceUSD": 40,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Ropa",
+            "images": [
+                "Ropa/40usd.jpg",
+                "Ropa/40usd.jpg"
+            ],
+            "priceUSD": 40,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Ropa",
+            "images": [
+                "Ropa/45-usd.jpg",
+                "Ropa/45-usd.jpg"
+            ],
+            "priceUSD": 45,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Ropa",
+            "images": [
+                "Ropa/45..usd.jpg",
+                "Ropa/45..usd.jpg"
+            ],
+            "priceUSD": 45,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Ropa",
+            "images": [
+                "Ropa/45.usd.jpg",
+                "Ropa/45.usd.jpg"
+            ],
+            "priceUSD": 45,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Ropa",
+            "images": [
+                "Ropa/45usd.jpg",
+                "Ropa/45usd.jpg"
+            ],
+            "priceUSD": 45,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Ropa",
+            "images": [
+                "Ropa/50usd.jpg",
+                "Ropa/50usd.jpg"
+            ],
+            "priceUSD": 50,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Ropa",
+            "images": [
+                "Ropa/50´´usd.jpg",
+                "Ropa/50´´usd.jpg"
+            ],
+            "priceUSD": 50,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/50+usd.jpg",
+                "Tenis/50+usd.jpg"
+            ],
+            "priceUSD": 50,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/50-u.jpg",
+                "Tenis/50-u.jpg"
+            ],
+            "priceUSD": 50,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/50usd.jpg",
+                "Tenis/50usd.jpg"
+            ],
+            "priceUSD": 50,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/55,usd.jpg",
+                "Tenis/55,usd.jpg"
+            ],
+            "priceUSD": 55,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/55-usd.jpg",
+                "Tenis/55-usd.jpg"
+            ],
+            "priceUSD": 55,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/55.jpg",
+                "Tenis/55.jpg"
+            ],
+            "priceUSD": 55,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/55.u.jpg",
+                "Tenis/55.u.jpg"
+            ],
+            "priceUSD": 55,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/55d.jpg",
+                "Tenis/55d.jpg"
+            ],
+            "priceUSD": 55,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/55p.jpg",
+                "Tenis/55p.jpg"
+            ],
+            "priceUSD": 55,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/55u.jpg",
+                "Tenis/55u.jpg"
+            ],
+            "priceUSD": 55,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/55usd-.jpg",
+                "Tenis/55usd-.jpg"
+            ],
+            "priceUSD": 55,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/55usd.jpg",
+                "Tenis/55usd.jpg"
+            ],
+            "priceUSD": 55,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/55usd{.jpg",
+                "Tenis/55usd{.jpg"
+            ],
+            "priceUSD": 55,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/55{.jpg",
+                "Tenis/55{.jpg"
+            ],
+            "priceUSD": 55,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/60...jpg",
+                "Tenis/60...jpg"
+            ],
+            "priceUSD": 60,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/60..jpg",
+                "Tenis/60..jpg"
+            ],
+            "priceUSD": 60,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/60.jpg",
+                "Tenis/60.jpg"
+            ],
+            "priceUSD": 60,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/60d.jpg",
+                "Tenis/60d.jpg"
+            ],
+            "priceUSD": 60,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/60s.jpg",
+                "Tenis/60s.jpg"
+            ],
+            "priceUSD": 60,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/60usd.jpg",
+                "Tenis/60usd.jpg"
+            ],
+            "priceUSD": 60,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/60}.jpg",
+                "Tenis/60}.jpg"
+            ],
+            "priceUSD": 60,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/65.jpg",
+                "Tenis/65.jpg"
+            ],
+            "priceUSD": 65,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/70,.jpg",
+                "Tenis/70,.jpg"
+            ],
+            "priceUSD": 70,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/70..jpg",
+                "Tenis/70..jpg"
+            ],
+            "priceUSD": 70,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/70.jpg",
+                "Tenis/70.jpg"
+            ],
+            "priceUSD": 70,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/70usd.jpg",
+                "Tenis/70usd.jpg"
+            ],
+            "priceUSD": 70,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Tenis",
+            "images": [
+                "Tenis/70´´.jpg",
+                "Tenis/70´´.jpg"
+            ],
+            "priceUSD": 70,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Jugetes para Adultos",
+            "images": [
+                "Jugetes para Adultos/25usd.jpg",
+                "Jugetes para Adultos/25usd.jpg"
+            ],
+            "priceUSD": 25,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Jugetes para Adultos",
+            "images": [
+                "Jugetes para Adultos/30 usd.jpg",
+                "Jugetes para Adultos/30 usd.jpg"
+            ],
+            "priceUSD": 30,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Jugetes para Adultos",
+            "images": [
+                "Jugetes para Adultos/30--usd.jpg",
+                "Jugetes para Adultos/30--usd.jpg"
+            ],
+            "priceUSD": 30,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Jugetes para Adultos",
+            "images": [
+                "Jugetes para Adultos/30-usd.jpg",
+                "Jugetes para Adultos/30-usd.jpg"
+            ],
+            "priceUSD": 30,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Jugetes para Adultos",
+            "images": [
+                "Jugetes para Adultos/30.jpg",
+                "Jugetes para Adultos/30.jpg"
+            ],
+            "priceUSD": 30,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Jugetes para Adultos",
+            "images": [
+                "Jugetes para Adultos/30.usd.jpg",
+                "Jugetes para Adultos/30.usd.jpg"
+            ],
+            "priceUSD": 30,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        },
+        {
+            "category": "Jugetes para Adultos",
+            "images": [
+                "Jugetes para Adultos/30usd.jpg",
+                "Jugetes para Adultos/30usd.jpg"
+            ],
+            "priceUSD": 30,
+            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
+            "features": [
+                "Materiales de alta calidad",
+                "Durabilidad garantizada",
+                "Ajuste perfecto"
+            ]
+        }
     ]
 }

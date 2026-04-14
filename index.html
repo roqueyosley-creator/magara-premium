@@ -2,12 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>MAGARA Premium | E-commerce Sensual &amp; Profesional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGARA Premium | E-commerce Sensual & Profesional</title>
     <meta name="description" content="E-commerce premium de ropa, zapatos y juguetes para adultos en Cuba. Calidad, discreción y elegancia.">
-    <meta name="theme-color" content="#121212">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -17,7 +16,7 @@
     <header>
         <div class="container">
             <h1 class="logo">MAGARA</h1>
-            <span class="subtitle">Premium E-commerce</span>
+            <p class="subtitle">Premium E-commerce</p>
             <nav id="main-nav">
                 <a href="#" class="nav-link active" data-category="Todos">Todos</a>
                 <a href="#" class="nav-link" data-category="Ropa">Ropa</a>
@@ -25,40 +24,131 @@
                 <a href="#" class="nav-link" data-category="Jugetes para Adultos">Juguetes</a>
             </nav>
         </div>
+        <!-- Barra de Confianza -->
+        <div class="trust-bar">
+            <div class="container trust-bar-inner">
+                <div class="trust-item"><i class="fas fa-box"></i> Envío 100% Discreto</div>
+                <div class="trust-item"><i class="fas fa-lock"></i> Pagos Encriptados</div>
+                <div class="trust-item"><i class="fas fa-headset"></i> Atención Personalizada</div>
+            </div>
+        </div>
     </header>
 
     <main class="container">
         <!-- Exchange Rate Info -->
-        <div id="exchange-info">
-            Tasa: 1 USD = <span id="current-rate">520</span> CUP
+        <div id="exchange-info" style="text-align: right; font-size: 0.8rem; color: var(--accent-nude); margin-top: 1rem;">
+            Tasa de cambio: 1 USD = <span id="current-rate">520</span> CUP
         </div>
 
         <!-- Product Grid -->
         <section class="product-grid" id="product-container">
-            <!-- Products injected by JS -->
-            <p class="no-products-msg">Cargando catálogo...</p>
+            <!-- Products will be injected by JS -->
+            <div class="loader">Cargando catálogo...</div>
         </section>
     </main>
 
+    <!-- Shopping Cart Sidebar (Conceptual) -->
+    <div id="cart-drawer" style="display:none;"></div>
+
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/79918818456" class="whatsapp-float" id="whatsapp-order" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a href="#" class="whatsapp-float advisory-button" id="whatsapp-order" target="_blank">
+        <div class="advisory-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="advisory-text">Asesoría Íntima</div>
     </a>
 
-    <footer>
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
         <div class="container">
+            <div class="newsletter-box">
+                <h2>Únete al círculo privado</h2>
+                <p>Recibe consejos de bienestar íntimo y ofertas exclusivas con total discreción.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Tu correo privado" required>
+                    <button type="submit" class="btn">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2 class="logo" style="color: var(--accent-gold); font-size: 2rem;">MAGARA</h2>
+                <p class="subtitle" style="text-transform: none; letter-spacing: 1px; color: var(--text-muted); font-size: 0.9rem;">Exploración sensorial con calidad premium y absoluta discreción.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Guía de Compra Discreta</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos de Servicio</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-payment">
+                <h3>Métodos de Pago</h3>
+                <div class="payment-icons">
+                    <i class="fas fa-money-bill-wave" title="Efectivo M.N./USD"></i>
+                    <i class="fas fa-exchange-alt" title="Transferencias Locales"></i>
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
             <p>&copy; 2026 MAGARA Premium. Todos los derechos reservados.</p>
             <div class="social-links">
-                <a href="https://www.instagram.com/sile__store?igsh=MTEwdjR4bjNvenNlOQ%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://chat.whatsapp.com/CPMcQHEGegw5SQqnRBrDi9?mode=gi_t" target="_blank" rel="noopener" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
+                <a href="https://www.instagram.com/sile__store?igsh=MTEwdjR4bjNvenNlOQ%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://chat.whatsapp.com/CPMcQHEGegw5SQqnRBrDi9?mode=gi_t" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
 
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-gallery">
+                    <img id="modal-main-img" src="" alt="Main Product Image">
+                    <div id="modal-thumbs" class="modal-thumbnails"></div>
+                </div>
+                <div class="modal-details">
+                    <div id="modal-category" class="product-category"></div>
+                    <h2 id="modal-title"></h2>
+                    <div class="product-price" style="font-size: 1.2rem; margin: 1rem 0;">
+                        <span id="modal-price-usd" class="price-usd"></span>
+                        <span id="modal-price-cup" class="price-cup"></span>
+                    </div>
+                    <p id="modal-description" class="modal-desc"></p>
+                    <ul id="modal-features" class="modal-features-list"></ul>
+                    <button id="modal-buy-btn" class="btn">
+                        <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Age Verification Modal -->
+    <div id="age-modal" class="age-modal-overlay">
+        <div class="age-modal-content">
+            <h2 class="logo" style="margin-bottom: 0.5rem; text-align: center;">MAGARA</h2>
+            <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--accent-gold); text-align: center; text-transform: none; font-style: italic;">Bienestar Íntimo & Calidad Premium</h3>
+            <p style="margin-bottom: 2rem; color: var(--text-main); text-align: center; font-size: 1rem;">
+                <i class="fas fa-exclamation-triangle" style="color: var(--accent-nude); margin-right: 0.5rem;"></i>
+                Para ingresar, debes confirmar que eres <strong>mayor de 18 años</strong>. ¿Deseas acceder a esta experiencia de exploración sensorial?
+            </p>
+            <div class="age-modal-buttons">
+                <button id="btn-age-yes" class="btn btn-yes">Sí, soy mayor de 18</button>
+                <button id="btn-age-no" class="btn btn-no">No, salir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
