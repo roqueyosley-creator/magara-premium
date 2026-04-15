@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!error && data) {
                 currentProducts = data.map(p => ({
                     id: p.id,
+                    created_at: p.created_at,
                     category: p.category,
                     priceUSD: p.priceusd || p.priceUSD,
                     img: p.images && p.images.length > 0 ? p.images[0] : p.img // Soporte dual
@@ -141,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             } else if (data && data.length > 0) {
                 newProduct.id = data[0].id;
+                newProduct.created_at = data[0].created_at;
             }
         }
 
@@ -192,6 +194,54 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    window.moveProductUp = async function(index) {
+        if (index === 0) return; // Ya está arriba del todo
+        
+        const p1 = currentProducts[index];
+        const p2 = currentProducts[index - 1];
+
+        // Intercambiar en local
+        currentProducts[index] = p2;
+        currentProducts[index - 1] = p1;
+
+        // Intercambiar en Supabase
+        if (supabaseClient && p1.id && p2.id && p1.created_at && p2.created_at) {
+            const tempTime = p1.created_at;
+            p1.created_at = p2.created_at;
+            p2.created_at = tempTime;
+
+            await Promise.all([
+                supabaseClient.from('products').update({ created_at: p1.created_at }).eq('id', p1.id),
+                supabaseClient.from('products').update({ created_at: p2.created_at }).eq('id', p2.id)
+            ]);
+        }
+        saveProducts();
+    };
+
+    window.moveProductDown = async function(index) {
+        if (index === currentProducts.length - 1) return; // Ya está abajo del todo
+        
+        const p1 = currentProducts[index];
+        const p2 = currentProducts[index + 1];
+
+        // Intercambiar en local
+        currentProducts[index] = p2;
+        currentProducts[index + 1] = p1;
+
+        // Intercambiar en Supabase
+        if (supabaseClient && p1.id && p2.id && p1.created_at && p2.created_at) {
+            const tempTime = p1.created_at;
+            p1.created_at = p2.created_at;
+            p2.created_at = tempTime;
+
+            await Promise.all([
+                supabaseClient.from('products').update({ created_at: p1.created_at }).eq('id', p1.id),
+                supabaseClient.from('products').update({ created_at: p2.created_at }).eq('id', p2.id)
+            ]);
+        }
+        saveProducts();
+    };
+
     function saveProducts() {
         localStorage.setItem('magara_products', JSON.stringify(currentProducts));
         renderStats(currentProducts);
@@ -212,7 +262,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 </td>
                 <td>${p.category}</td>
                 <td>$${p.priceUSD}</td>
-                <td style="text-align: right;">
+                <td style="text-align: right; display: flex; gap: 0.3rem; justify-content: flex-end;">
+                    <button class="btn" style="background: #333; color: white; width: auto; padding: 0.4rem 0.6rem; margin: 0; font-size: 0.8rem;" onclick="moveProductUp(${index})" title="Mover Arriba" ${index === 0 ? 'disabled style="opacity: 0.5;"' : ''}>
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                    <button class="btn" style="background: #333; color: white; width: auto; padding: 0.4rem 0.6rem; margin: 0; font-size: 0.8rem;" onclick="moveProductDown(${index})" title="Mover Abajo" ${index === products.length - 1 ? 'disabled style="opacity: 0.5;"' : ''}>
+                        <i class="fas fa-arrow-down"></i>
+                    </button>
                     <button class="btn" style="background: #ff4757; color: white; width: auto; padding: 0.4rem 0.8rem; margin: 0; font-size: 0.8rem;" onclick="deleteProduct(${index})" title="Eliminar Producto">
                         <i class="fas fa-trash"></i>
                     </button>
