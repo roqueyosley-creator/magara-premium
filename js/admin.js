@@ -195,21 +195,20 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.moveProductUp = async function(index) {
-        if (index === 0) return; // Ya está arriba del todo
+        if (index === 0) return; // ya esta arriba de todo
+        const p1 = currentProducts[index]; // El que sube
+        const p2 = currentProducts[index - 1]; // El que baja
         
-        const p1 = currentProducts[index];
-        const p2 = currentProducts[index - 1];
-
-        // Intercambiar en local
+        // Swap local
         currentProducts[index] = p2;
         currentProducts[index - 1] = p1;
 
-        // Intercambiar en Supabase
+        // Swap en db
         if (supabaseClient && p1.id && p2.id && p1.created_at && p2.created_at) {
             const tempTime = p1.created_at;
             p1.created_at = p2.created_at;
             p2.created_at = tempTime;
-
+            
             await Promise.all([
                 supabaseClient.from('products').update({ created_at: p1.created_at }).eq('id', p1.id),
                 supabaseClient.from('products').update({ created_at: p2.created_at }).eq('id', p2.id)
@@ -219,21 +218,20 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.moveProductDown = async function(index) {
-        if (index === currentProducts.length - 1) return; // Ya está abajo del todo
+        if (index === currentProducts.length - 1) return; // ya esta al fondo
+        const p1 = currentProducts[index]; // El que baja
+        const p2 = currentProducts[index + 1]; // El que sube
         
-        const p1 = currentProducts[index];
-        const p2 = currentProducts[index + 1];
-
-        // Intercambiar en local
+        // Swap local
         currentProducts[index] = p2;
         currentProducts[index + 1] = p1;
 
-        // Intercambiar en Supabase
+        // Swap en db
         if (supabaseClient && p1.id && p2.id && p1.created_at && p2.created_at) {
             const tempTime = p1.created_at;
             p1.created_at = p2.created_at;
             p2.created_at = tempTime;
-
+            
             await Promise.all([
                 supabaseClient.from('products').update({ created_at: p1.created_at }).eq('id', p1.id),
                 supabaseClient.from('products').update({ created_at: p2.created_at }).eq('id', p2.id)
@@ -262,14 +260,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 </td>
                 <td>${p.category}</td>
                 <td>$${p.priceUSD}</td>
-                <td style="text-align: right; display: flex; gap: 0.3rem; justify-content: flex-end;">
-                    <button class="btn" style="background: #333; color: white; width: auto; padding: 0.4rem 0.6rem; margin: 0; font-size: 0.8rem;" onclick="moveProductUp(${index})" title="Mover Arriba" ${index === 0 ? 'disabled style="opacity: 0.5;"' : ''}>
+                <td style="text-align: right; min-width: 140px;">
+                    <button class="btn" style="background: #333; color: white; width: auto; padding: 0.4rem 0.6rem; margin: 0 0.2rem 0 0; font-size: 0.8rem;" onclick="moveProductUp(${index})" title="Subir" ${index === 0 ? 'disabled style="opacity:0.3; cursor:not-allowed;"' : ''}>
                         <i class="fas fa-arrow-up"></i>
                     </button>
-                    <button class="btn" style="background: #333; color: white; width: auto; padding: 0.4rem 0.6rem; margin: 0; font-size: 0.8rem;" onclick="moveProductDown(${index})" title="Mover Abajo" ${index === products.length - 1 ? 'disabled style="opacity: 0.5;"' : ''}>
+                    <button class="btn" style="background: #333; color: white; width: auto; padding: 0.4rem 0.6rem; margin: 0 0.2rem 0 0; font-size: 0.8rem;" onclick="moveProductDown(${index})" title="Bajar" ${index === products.length - 1 ? 'disabled style="opacity:0.3; cursor:not-allowed;"' : ''}>
                         <i class="fas fa-arrow-down"></i>
                     </button>
-                    <button class="btn" style="background: #ff4757; color: white; width: auto; padding: 0.4rem 0.8rem; margin: 0; font-size: 0.8rem;" onclick="deleteProduct(${index})" title="Eliminar Producto">
+                    <button class="btn" style="background: #ff4757; color: white; width: auto; padding: 0.4rem 0.6rem; margin: 0; font-size: 0.8rem;" onclick="deleteProduct(${index})" title="Eliminar Producto">
                         <i class="fas fa-trash"></i>
                     </button>
                 </td>
