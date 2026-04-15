@@ -20,93 +20,10 @@
             "category": "Ropa",
             "images": [
                 "Ropa/40,usd.jpg",
-                "Ropa/40,usd.jpg"
-            ],
-            "priceUSD": 40,
-            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
-            "features": [
-                "Materiales de alta calidad",
-                "Durabilidad garantizada",
-                "Ajuste perfecto"
-            ]
-        },
-        {
-            "category": "Ropa",
-            "images": [
-                "Ropa/40-usd.jpg",
-                "Ropa/40-usd.jpg"
-            ],
-            "priceUSD": 40,
-            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
-            "features": [
-                "Materiales de alta calidad",
-                "Durabilidad garantizada",
-                "Ajuste perfecto"
-            ]
-        },
-        {
-            "category": "Ropa",
-            "images": [
-                "Ropa/40usd.jpg",
-                "Ropa/40usd.jpg"
-            ],
-            "priceUSD": 40,
-            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
-            "features": [
-                "Materiales de alta calidad",
-                "Durabilidad garantizada",
-                "Ajuste perfecto"
-            ]
-        },
-        {
-            "category": "Ropa",
-            "images": [
                 "Ropa/45-usd.jpg",
-                "Ropa/45-usd.jpg"
-            ],
-            "priceUSD": 45,
-            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
-            "features": [
-                "Materiales de alta calidad",
-                "Durabilidad garantizada",
-                "Ajuste perfecto"
-            ]
-        },
-        {
-            "category": "Ropa",
-            "images": [
-                "Ropa/45..usd.jpg",
-                "Ropa/45..usd.jpg"
-            ],
-            "priceUSD": 45,
-            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
-            "features": [
-                "Materiales de alta calidad",
-                "Durabilidad garantizada",
-                "Ajuste perfecto"
-            ]
-        },
-        {
-            "category": "Ropa",
-            "images": [
-                "Ropa/45.usd.jpg",
                 "Ropa/45.usd.jpg"
             ],
-            "priceUSD": 45,
-            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
-            "features": [
-                "Materiales de alta calidad",
-                "Durabilidad garantizada",
-                "Ajuste perfecto"
-            ]
-        },
-        {
-            "category": "Ropa",
-            "images": [
-                "Ropa/45usd.jpg",
-                "Ropa/45usd.jpg"
-            ],
-            "priceUSD": 45,
+            "priceUSD": 40,
             "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
             "features": [
                 "Materiales de alta calidad",
@@ -118,34 +35,6 @@
             "category": "Ropa",
             "images": [
                 "Ropa/50usd.jpg",
-                "Ropa/50usd.jpg"
-            ],
-            "priceUSD": 50,
-            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
-            "features": [
-                "Materiales de alta calidad",
-                "Durabilidad garantizada",
-                "Ajuste perfecto"
-            ]
-        },
-        {
-            "category": "Ropa",
-            "images": [
-                "Ropa/50´´usd.jpg",
-                "Ropa/50´´usd.jpg"
-            ],
-            "priceUSD": 50,
-            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
-            "features": [
-                "Materiales de alta calidad",
-                "Durabilidad garantizada",
-                "Ajuste perfecto"
-            ]
-        },
-        {
-            "category": "Tenis",
-            "images": [
-                "Tenis/50+usd.jpg",
                 "Tenis/50+usd.jpg"
             ],
             "priceUSD": 50,
@@ -160,20 +49,6 @@
             "category": "Tenis",
             "images": [
                 "Tenis/50-u.jpg",
-                "Tenis/50-u.jpg"
-            ],
-            "priceUSD": 50,
-            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
-            "features": [
-                "Materiales de alta calidad",
-                "Durabilidad garantizada",
-                "Ajuste perfecto"
-            ]
-        },
-        {
-            "category": "Tenis",
-            "images": [
-                "Tenis/50usd.jpg",
                 "Tenis/50usd.jpg"
             ],
             "priceUSD": 50,
@@ -188,20 +63,6 @@
             "category": "Tenis",
             "images": [
                 "Tenis/55,usd.jpg",
-                "Tenis/55,usd.jpg"
-            ],
-            "priceUSD": 55,
-            "description": "Diseño exclusivo de calidad premium, pensado para resaltar tu estilo y brindarte la mejor comodidad. Perfecto para cualquier ocasión.",
-            "features": [
-                "Materiales de alta calidad",
-                "Durabilidad garantizada",
-                "Ajuste perfecto"
-            ]
-        },
-        {
-            "category": "Tenis",
-            "images": [
-                "Tenis/55-usd.jpg",
                 "Tenis/55-usd.jpg"
             ],
             "priceUSD": 55,

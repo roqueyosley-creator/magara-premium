@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentProducts = data.map(p => ({
                     id: p.id,
                     category: p.category,
-                    priceUSD: p.priceUSD,
+                    priceUSD: p.priceusd || p.priceUSD,
                     img: p.images && p.images.length > 0 ? p.images[0] : p.img // Soporte dual
                 }));
             } else {
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Guardar en Supabase
         if (supabaseClient) {
             const { data, error } = await supabaseClient.from('products').insert([
-                { category: category, priceUSD: priceUSD, images: [img] }
+                { category: category, priceusd: priceUSD, images: [img] }
             ]).select();
 
             if (error) {

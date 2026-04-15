@@ -78,7 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Mapear supabase a interfaz esperada si es necesario
             // Si la db está vacía, tal vez quieran cargar el json inicial
             if (data && data.length > 0) {
-                appData.products = data;
+                appData.products = data.map(p => ({
+                    ...p,
+                    priceUSD: p.priceusd || p.priceUSD
+                }));
             } else {
                 throw new Error("No products in Supabase");
             }
